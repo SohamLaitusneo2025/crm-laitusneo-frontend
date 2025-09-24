@@ -1,0 +1,149 @@
+.metric-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.metric-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.metric-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.metric-trend {
+  display: flex;
+  align-items: center;
+}
+
+.metric-change {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 16px;
+}
+
+.trend-up {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.trend-down {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.metric-content {
+  flex: 1;
+}
+
+.metric-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px 0;
+  line-height: 1;
+}
+
+.metric-subtitle {
+  font-size: 10px;
+  color: #9ca3af;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.3;
+  word-spacing: -0.5px;
+}
+
+/* Color themes */
+.metric-card-blue {
+  border-left-color: #3b82f6;
+}
+
+.metric-icon-blue {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.metric-card-green {
+  border-left-color: #10b981;
+}
+
+.metric-icon-green {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.metric-card-purple {
+  border-left-color: #8b5cf6;
+}
+
+.metric-icon-purple {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.metric-card-orange {
+  border-left-color: #f59e0b;
+}
+
+.metric-icon-orange {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.metric-card-red {
+  border-left-color: #ef4444;
+}
+
+.metric-icon-red {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .metric-card {
+    padding: 20px;
+  }
+  
+  .metric-value {
+    font-size: 28px;
+  }
+  
+  .metric-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .metric-subtitle {
+    font-size: 9px;
+    word-spacing: -1px;
+  }
+}

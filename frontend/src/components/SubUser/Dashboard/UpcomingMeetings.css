@@ -1,0 +1,309 @@
+.upcoming-meetings {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid #f3f4f6;
+  height: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.meetings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.meetings-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.meetings-count {
+  background: #f3f4f6;
+  color: #6b7280;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.meetings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* Custom scrollbar styling */
+.meetings-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.meetings-list::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.meetings-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.meetings-list::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.meeting-card {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.2s ease;
+}
+
+.meeting-card:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+.meeting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.meeting-type {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meeting-type-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meeting-type-text {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.meeting-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.meeting-content {
+  margin-bottom: 8px;
+}
+
+.meeting-details {
+  margin-bottom: 8px;
+}
+
+.client-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.company-name {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 8px 0;
+}
+
+.platform-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.platform-icon {
+  font-size: 14px;
+}
+
+.platform-name {
+  font-weight: 600;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0fdf4;
+  color: #166534;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.location-text {
+  font-weight: 600;
+}
+
+.city-text {
+  color: #6b7280;
+  margin-left: 4px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.meeting-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.meeting-date {
+  background: #3b82f6;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.meeting-duration {
+  color: #6b7280;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Loading and empty states */
+.meetings-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e5e7eb;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.meetings-loading p {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+.no-meetings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.no-meetings svg {
+  color: #d1d5db;
+  margin-bottom: 16px;
+}
+
+.no-meetings h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 8px 0;
+}
+
+.no-meetings p {
+  font-size: 14px;
+  margin: 0;
+  color: #6b7280;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .upcoming-meetings {
+    padding: 16px;
+  }
+  
+  .meetings-title {
+    font-size: 16px;
+  }
+  
+  .meeting-card {
+    padding: 12px;
+  }
+  
+  .client-name {
+    font-size: 14px;
+  }
+  
+  .company-name {
+    font-size: 12px;
+  }
+  
+  .contact-details {
+    gap: 4px;
+  }
+  
+  .contact-item {
+    font-size: 11px;
+  }
+}
